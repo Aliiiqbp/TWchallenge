@@ -1,22 +1,22 @@
 import java.util.*;
 
-public class Army {
+public class Bazaar {
     private int blockID;
-    private int coefficiency;
     private int level;
     private int unitID;
+    private ArrayList<Person> personArr = new ArrayList<Person>();
+    private int day;
+    private int coefficiency;
+    private int employee;
     private int score;
     private int gill;
-    private int day = 0;
-    private int soldiers = 0;
-    private ArrayList<Person> personArr = new ArrayList<Person>();
 
-    Army(int blckID, int untID) {
+    Bazaar(int blckID, int untID) {
         blockID = blckID;
         unitID = untID;
     }
 
-    public void upgradeArmy() {
+    public void upgradeBazaar() {
 
     }
 
