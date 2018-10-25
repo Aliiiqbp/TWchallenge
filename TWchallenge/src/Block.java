@@ -90,6 +90,21 @@ public class Block {
         return "NotFound";
     }
 
+    public ArrayList<Army> getArmyArr() {
+        return armyArr;
+    }
+
+    public ArrayList<Defense> getDefenseArr() {
+        return defenseArr;
+    }
+
+    public ArrayList<Bazaar> getBazaarArr() {
+        return bazaarArr;
+    }
+
+    public ArrayList<Home> getHomeArr() {
+        return homeArr;
+    }
 
 //    public int gillCalc(){
 //        int addGill = 0;

@@ -108,16 +108,16 @@ public class Main {
                 switch (tehran[round].getBlockArr().get(blockID).getType(unitID)) {
 
                     case "Army":
-                        tehran[round].getBlockArr().get(blockID).upgradeArmy(unitID);
+                        tehran[round].getBlockArr().get(blockID).getArmyArr().get(unitID).upgradeArmy();
                         break;
                     case "Bazaar":
-                        tehran[round].getBlockArr().get(blockID).upgradeBazaar(unitID);
+                        tehran[round].getBlockArr().get(blockID).getBazaarArr().get(unitID).upgradeBazaar();
                         break;
                     case "Home":
-                        tehran[round].getBlockArr().get(blockID).upgradeHome(unitID);
+                        tehran[round].getBlockArr().get(blockID).getHomeArr().get(unitID).upgradeHome();
                         break;
                     case "Defense":
-                        tehran[round].getBlockArr().get(blockID).upgradeDefense(unitID);
+                        tehran[round].getBlockArr().get(blockID).getDefenseArr().get(unitID).upgradeDefense();
                         break;
                     default:
                         System.out.println("not possible");
