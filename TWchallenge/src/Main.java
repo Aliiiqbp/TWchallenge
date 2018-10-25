@@ -60,23 +60,23 @@ public class Main {
                 tehran[round].newBlock();
                 continue;
             } else if (command.matches("remove \\d")) {
-                tehran[round]. // remove block
+                tehran[round].getBlockArr().get(B.id)./////////////////////////remove
                 continue;
             } else if (command.matches("upgrade \\d")) {
-                tehran[round]. // upgrade block
+                tehran[round].getBlockArr().get(B.id).//////////////////////////upgrade
                 continue;
             }
 
 
 //Add Bazaar, Army ,Defense
             if (command.matches("add bazar \\d")) {
-                tehran[round].addBazar([B.id]);
+                tehran[round].getBlockArr().get(B.id).addbazaar();
                 continue;
             } else if (command.matches("add army \\d")) {
-                tehran[round].addArmy([B.id]);
+                tehran[round].getBlockArr().get(B.id).addArmy();
                 continue;
             } else if (command.matches("add defense \\d")) {
-                tehran[round].adddefense([B.id]);
+                tehran[round].getBlockArr().get(B.id).addDefense();
                 continue;
             }
 
@@ -84,7 +84,9 @@ public class Main {
 //Upgrade [B.id][U,id]
             if (command.matches("upgrade \\d \\d")) {
 
-                if (tehran[round].)
+
+
+                if (tehran[round].getBlockArr().get().getType().equalsIgnoreCase())
 
                 continue;
             } else if (command.matches("remove [B.id] [U.id]")) {
