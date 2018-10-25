@@ -20,4 +20,8 @@ public class City {
     public int getGill() {
         return gill;
     }
+
+    public ArrayList<Block> getBlockArr() {
+        return blockArr;
+    }
 }
