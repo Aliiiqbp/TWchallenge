@@ -8,7 +8,7 @@ public class Main {
         Scanner read = new Scanner(System.in);
         City[] tehran = new City[2];
 
-        boolean round = false;
+        int round = 0;
 
         while (true) {
 
@@ -22,10 +22,10 @@ public class Main {
 
 //Other commands like score, gill, done, attackloot.
             if (command.equalsIgnoreCase("done")) {
-                if (round == true) {
-                    round = false;
+                if (round == 1) {
+                    round = 0;
                 } else {
-                    round = true;
+                    round = 1;
                 }
                 continue;
             } else if (command.equalsIgnoreCase("see score")) {
@@ -70,14 +70,13 @@ public class Main {
 
 //Add Bazaar, Army ,Defense
             if (command.matches("add bazar \\d")) {
-
+                tehran[round].addBazar([B.id]);
                 continue;
             } else if (command.matches("add army \\d")) {
-
-
+                tehran[round].addArmy([B.id]);
                 continue;
             } else if (command.matches("add defense \\d")) {
-
+                tehran[round].adddefense([B.id]);
                 continue;
             }
 
@@ -85,7 +84,7 @@ public class Main {
 //Upgrade [B.id][U,id]
             if (command.matches("upgrade \\d \\d")) {
 
-                //army, defense, bazaar getType()
+
 
                 continue;
             } else if (command.matches("remove [B.id] [U.id]")) {
