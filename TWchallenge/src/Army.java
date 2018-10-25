@@ -15,6 +15,14 @@ public class Army {
         unitID = untID;
     }
 
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
     public void upgradeArmy() {
 
     }
