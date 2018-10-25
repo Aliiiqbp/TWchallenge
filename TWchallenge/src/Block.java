@@ -26,11 +26,28 @@ public class Block {
         unemployment = floor * unit * 5;
     }
 
-    public void addbazaar() {
+    public boolean addbazaar() {
         num_units++;
-
-        bazaarArr.add(new Bazaar(blockID, num_units));
+        if (unemployment < 50)
+            return false;
+        int counter = 0;
+        Bazaar bazaar = new Bazaar(blockID, num_units);
+        bazaarArr.add(bazaar);
+        for (Home home : homeArr) {
+            for (Person person : home.getPersonArr()){
+                if (!person.getisEmp()){
+                    person.setEmp(true);
+                    unemployment --;
+                    bazaar.getPersonArr().add(person);
+                    counter++;
+                    if (counter == 50){
+                        return true;
+                    }
+                }
+            }
+        }
         System.out.println(num_units);
+        return true;
     }
 
     public void addArmy() {

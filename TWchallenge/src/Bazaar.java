@@ -30,7 +30,15 @@ public class Bazaar {
     public int getEmployee() {
         return employee;
     }
-//    public int gillCalc(){
+
+    public void setPersonArr(ArrayList<Person> personArr) {
+        this.personArr = personArr;
+    }
+
+    public ArrayList<Person> getPersonArr() {
+        return personArr;
+    }
+    //    public int gillCalc(){
 //        int toAdd;
 //        for (Person person : personArr) {
 //             personArr;
