@@ -36,4 +36,8 @@ public class City {
     public ArrayList<Block> getBlockArr() {
         return blockArr;
     }
+
+    public void removeBlock(num_block){
+
+    }
 }
