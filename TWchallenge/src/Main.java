@@ -17,7 +17,7 @@ public class Main {
 
             String[] commandSplitted = new String[5];
             commandSplitted = command.split(" ");
-
+            int blockNumber = 0;
 
 //End Game *_*
             if (command.equalsIgnoreCase("yield")) {
@@ -66,12 +66,12 @@ public class Main {
                 continue;
             } else if (command.matches("remove [\\d+]")) {
 
-                int blockNumber = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockNumber)./////////////////////////remov
+                blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber)./////////////////////////remove
                 continue;
             } else if (command.matches("upgrade [\\d+]")) {
 
-                int blockNumber = Integer.parseInt(commandSplitted[1])
+                blockNumber = Integer.parseInt(commandSplitted[1])
                 tehran[round].getBlockArr().get(blockNumber).//////////////////////////upgrade
                 continue;
             }
@@ -80,13 +80,18 @@ public class Main {
 //Add Bazaar, Army ,Defense
             if (command.matches("add bazar \\d")) {
 
-                tehran[round].getBlockArr().get(B.id).addbazaar();
+                blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber).addbazaar();
                 continue;
             } else if (command.matches("add army \\d")) {
-                tehran[round].getBlockArr().get(B.id).addArmy();
+
+                blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber).addArmy();
                 continue;
             } else if (command.matches("add defense \\d")) {
-                tehran[round].getBlockArr().get(B.id).addDefense();
+
+                blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber).addDefense();
                 continue;
             }
 
@@ -95,10 +100,9 @@ public class Main {
             if (command.matches("upgrade \\d \\d")) {
 
 
-
                 if (tehran[round].getBlockArr().get().getType().equalsIgnoreCase())
 
-                continue;
+                    continue;
             } else if (command.matches("remove [B.id] [U.id]")) {
 
                 //army, defense, bazaar getType()
