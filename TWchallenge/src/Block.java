@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Block {
     private int blockID = 0;

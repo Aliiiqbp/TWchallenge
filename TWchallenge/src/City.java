@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class City {
     private int number = 0;

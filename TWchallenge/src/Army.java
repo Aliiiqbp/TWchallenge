@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Army {
     private int blockID;
     private int coefficiency;
@@ -17,9 +19,6 @@ public class Army {
 
     }
 
-    public void removeArmy(){
-
-    }
     public int getScore(){
         return score;
     }
