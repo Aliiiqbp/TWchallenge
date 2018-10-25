@@ -55,16 +55,16 @@ public class Main {
             if (command.matches("add home \\d+ \\d+ \\d+")) {
 
                 blockID = commandSplitted[2];
-                int numberOfFloor = commandSplitted[3];
-                int numberOfunits = commandSplitted[4];
+                int numberOfFloor = Integer.parseInt(commandSplitted[3]);
+                int numberOfunits = Integer.parseInt(commandSplitted[4]);
                 tehran[round].getBlockArr().get(blockID).addHome(numberOfFloor, numberOfunits);
 
                 continue;
             } else if (command.matches("upgrade [B.id] [U.id] (floor || unit)")) {
 
                 blockID = commandSplitted[2];
-                int numberOfFloor = commandSplitted[3];
-                int numberOfunits = commandSplitted[4];
+                int numberOfFloor = Integer.parseInt(commandSplitted[3]);
+                int numberOfunits = Integer.parseInt(commandSplitted[4]);
                 tehran[round].getBlockArr().get(blockID).upgradeHome(unitID);
 
                 continue;
@@ -78,7 +78,7 @@ public class Main {
             } else if (command.matches("remove [\\d+]")) {
 
                 blockID = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockID).removeBlock();
+                tehran[round].getBlockArr().get(blockID).removeB();
                 continue;
             } else if (command.matches("upgrade [\\d+]")) {
 
