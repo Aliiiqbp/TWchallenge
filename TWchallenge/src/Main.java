@@ -33,7 +33,7 @@ public class Main {
                 } else {
                     round = 1;
                 }
-                City.countDay();
+                City.dayCounter();
 
                 continue;
             } else if (command.equalsIgnoreCase("see score")) {
@@ -52,12 +52,20 @@ public class Main {
 
 
 //Add & Upgrade home
-            if (command.matches("add home [B.id] [numberOfFloor] [NumberOfUnit]")) {
+            if (command.matches("add home \\d+ \\d+ \\d+")) {
 
+                blockID = commandSplitted[2];
+                int numberOfFloor = commandSplitted[3];
+                int numberOfunits = commandSplitted[4];
+                tehran[round].getBlockArr().get(blockID).addHome(numberOfFloor, numberOfFloor);
 
                 continue;
             } else if (command.matches("upgrade [B.id] [U.id] (floor || unit)")) {
 
+                blockID = commandSplitted[2];
+                int numberOfFloor = commandSplitted[3];
+                int numberOfunits = commandSplitted[4];
+                tehran[round].getBlockArr().get(blockID).upgradeHome(unitID);
 
                 continue;
             }
@@ -84,7 +92,7 @@ public class Main {
             if (command.matches("add bazar \\d")) {
 
                 blockID = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockID).addbazaar();
+                tehran[round].getBlockArr().get(blockID).addBazaar();
                 continue;
             } else if (command.matches("add army \\d")) {
 
