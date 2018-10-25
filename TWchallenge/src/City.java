@@ -3,7 +3,7 @@ import java.util.*;
 public class City {
     private int number = 0;
     private int score = 0;
-    private int gill = 0;
+    private int gill = 30000;
     private ArrayList<Block> blockArr = new ArrayList<Block>();
     private boolean attak = false;
     private int num_blocks;
