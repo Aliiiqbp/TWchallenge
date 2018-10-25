@@ -18,30 +18,49 @@ public class Block {
     }
 
     public void addHome( int floor, int unit){
+        num_units++;
         homeArr.add(new Home (floor, unit, blockID, num_units));
         System.out.println(num_units);
-        num_units++;
     }
     public void addBazar(){
+        num_units++;
         bazarArr.add(new Bazaar(blockID, num_units));
         System.out.println(num_units);
-        num_units++;
     }
     public void addArmy(){
+        num_units++;
         armyArr.add(new Army (blockID, num_units));
         System.out.println(num_units);
-        num_units++;
     }
     public void addDefense(){
+        num_units++;
         defenseArr.add(new Defense (blockID, num_units));
         System.out.println(num_units);
-        num_units++;
     }
     public int getScore(){
         return score;
     }
     public int getGill(){
         return gill;
+    }
+    public String getType(int untId){
+        for (Army army : armyArr) {
+            if (army.getUnitID() == untId)
+                return "Army";
+        }
+        for (Bazaar bazaar : bazarArr) {
+            if (bazaar.getUnitID() == untId)
+                return "Bazaar";
+        }
+        for (Home home : homeArr) {
+            if (home.getUnitID() == untId)
+                return "Home";
+        }
+        for (Defense defence : defenseArr) {
+            if (defence.getUnitID() == untId)
+                return "Defence";
+        }
+        return "NotFound";
     }
 
 }

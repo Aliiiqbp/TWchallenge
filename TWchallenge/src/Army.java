@@ -1,3 +1,5 @@
+
+
 public class Army {
     private int blockID;
     private int coefficiency;
@@ -5,6 +7,8 @@ public class Army {
     private int unitID;
     private int score;
     private int gill;
+    private  int day = 0;
+    private int soldiers = 0;
     private ArrayList<Person> personArr = new ArrayList<Person>();
 
     Army( int blckID, int untID){
@@ -25,4 +29,7 @@ public class Army {
         return gill;
     }
 
+    public int getUnitID() {
+        return unitID;
+    }
 }
