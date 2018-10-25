@@ -57,7 +57,7 @@ public class Main {
                 blockID = commandSplitted[2];
                 int numberOfFloor = commandSplitted[3];
                 int numberOfunits = commandSplitted[4];
-                tehran[round].getBlockArr().get(blockID).addHome(numberOfFloor, numberOfunits);
+                tehran[round].getBlockArr().get(blockID).addHome(numberOfFloor, numberOfFloor);
 
                 continue;
             } else if (command.matches("upgrade [B.id] [U.id] (floor || unit)")) {
@@ -116,16 +116,16 @@ public class Main {
                 switch (tehran[round].getBlockArr().get(blockID).getType(unitID)) {
 
                     case "Army":
-                        tehran[round].getBlockArr().get(blockID).(unitID);
+                        tehran[round].getBlockArr().get(blockID).getArmyArr().get(unitID).upgradeArmy();
                         break;
                     case "Bazaar":
-                        tehran[round].getBlockArr().get(blockID).upgradeBazaar(unitID);
+                        tehran[round].getBlockArr().get(blockID).getBazaarArr().get(unitID).upgradeBazaar();
                         break;
                     case "Home":
-                        tehran[round].getBlockArr().get(blockID).upgradeHome(unitID);
+                        tehran[round].getBlockArr().get(blockID).getHomeArr().get(unitID).upgradeHome();
                         break;
                     case "Defense":
-                        tehran[round].getBlockArr().get(blockID).upgradeDefense(unitID);
+                        tehran[round].getBlockArr().get(blockID).getDefenseArr().get(unitID).upgradeDefense();
                         break;
                     default:
                         System.out.println("not possible");
