@@ -15,23 +15,23 @@ public class Main {
             String command = read.nextLine();
             command = command.toLowerCase();
 //End Game *_*
-            if (command.equalsIgnoreCase("Yield")) {
+            if (command.equalsIgnoreCase("yield")) {
                 break;
             }
 
 
 //Other commands like score, gill, done, attackloot.
-            if (command.equalsIgnoreCase("Done")) {
+            if (command.equalsIgnoreCase("done")) {
                 if (round == true) {
                     round = false;
                 } else {
                     round = true;
                 }
                 continue;
-            } else if (command.equalsIgnoreCase("See Score")) {
+            } else if (command.equalsIgnoreCase("see score")) {
                 System.out.println(tehran[round].getScore());
                 continue;
-            } else if (command.equalsIgnoreCase("See Gills")) {
+            } else if (command.equalsIgnoreCase("see gills")) {
                 System.out.println(tehran[round].getGill());
                 continue;
             } else if (command.matches("attack \\d")) {
@@ -44,11 +44,11 @@ public class Main {
 
 
 //Add & Upgrade home
-            if (command.equalsIgnoreCase("Add Home [B.id] [numberOfFloor] [NumberOfUnit]")) {
+            if (command.matches("add home [B.id] [numberOfFloor] [NumberOfUnit]")) {
 
 
                 continue;
-            } else if (command.equalsIgnoreCase("Upgrade [B.id] [U.id] (floor || unit)")) {
+            } else if (command.matches("upgrade [B.id] [U.id] (floor || unit)")) {
 
 
                 continue;
@@ -56,38 +56,39 @@ public class Main {
 
 
 //Add, Remove, Upgrade Block.
-            if (command.equalsIgnoreCase("Add Block")) {
-
+            if (command.equalsIgnoreCase("add block")) {
+                tehran[round].newBlock();
                 continue;
-            } else if (command.equalsIgnoreCase("Remove [B.id]")) {
-
+            } else if (command.matches("remove \\d")) {
+                tehran[round]. // remove block
                 continue;
-            } else if (command.equalsIgnoreCase("Upgrade [B.id]")) {
-
+            } else if (command.matches("upgrade \\d")) {
+                tehran[round]. // upgrade block
                 continue;
             }
 
 
 //Add Bazaar, Army ,Defense
-            if (command.equalsIgnoreCase("Add Bazar [B.id]")) {
+            if (command.matches("add bazar \\d")) {
 
                 continue;
-            } else if (command.equalsIgnoreCase("Add Army [B.id]")) {
+            } else if (command.matches("add army \\d")) {
+
 
                 continue;
-            } else if (command.equalsIgnoreCase("Add Defense [B.id]")) {
+            } else if (command.matches("add defense [B.id]")) {
 
                 continue;
             }
 
 
 //Upgrade [B.id][U,id]
-            if (command.equalsIgnoreCase("upgrade [B.id] [U.id]")) {
+            if (command.matches("upgrade [B.id] [U.id]")) {
 
                 //army, defense, bazaar getType()
 
                 continue;
-            } else if (command.equalsIgnoreCase("remove [B.id] [U.id]")) {
+            } else if (command.matches("remove [B.id] [U.id]")) {
 
                 //army, defense, bazaar getType()
 
