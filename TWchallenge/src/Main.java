@@ -76,14 +76,14 @@ public class Main {
 
 
                 continue;
-            } else if (command.matches("add defense [B.id]")) {
+            } else if (command.matches("add defense \\d")) {
 
                 continue;
             }
 
 
 //Upgrade [B.id][U,id]
-            if (command.matches("upgrade [B.id] [U.id]")) {
+            if (command.matches("upgrade \\d \\d")) {
 
                 //army, defense, bazaar getType()
 
