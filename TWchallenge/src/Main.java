@@ -7,50 +7,37 @@ public class Main {
         Scanner read = new Scanner(System.in);
 
 
-        while (true){
+        while (true) {
 
             String command = read.nextLine();
 
-            if (command.equalsIgnoreCase("Yield")){
+            if (command.equalsIgnoreCase("Yield")) {
                 break;
             }
 
 
-            if (command.equalsIgnoreCase("Done")){
+            if (command.equalsIgnoreCase("Done")) {
 
                 continue;
-            } else if (command.equalsIgnoreCase("See Score")){
-
-               continue;
-            } else if (command.equalsIgnoreCase("See Gills")){
+            } else if (command.equalsIgnoreCase("See Score")) {
 
                 continue;
-            } else if (command.equalsIgnoreCase("Attack []")){
+            } else if (command.equalsIgnoreCase("See Gills")) {
 
                 continue;
-            } else if (command.equalsIgnoreCase("Loot []")){
+            } else if (command.equalsIgnoreCase("Attack []")) {
+
+                continue;
+            } else if (command.equalsIgnoreCase("Loot []")) {
 
                 continue;
             }
 
 
-
-
-
-
         }
 
 
-
-
-
-
-
-
-
-        }
-
-
+    }
 
 
 }

@@ -9,14 +9,16 @@ public class Bazaar {
     private int employee;
     private int score;
     private int gill;
-    public void upgradeBazaar(){
+
+    public void upgradeBazaar() {
 
     }
 
-    public int getScore(){
+    public int getScore() {
         return score;
     }
-    public int getGill(){
+
+    public int getGill() {
         return gill;
     }
 

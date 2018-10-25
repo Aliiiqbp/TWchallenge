@@ -10,7 +10,7 @@ public class Home {
     private int gill = 0;
     private int blockID = 0;
 
-    Home( int flr, int unt, int blckID, int untID){
+    Home(int flr, int unt, int blckID, int untID) {
         floor = flr;
         unit = unt;
         blockID = blckID;
@@ -28,7 +28,8 @@ public class Home {
     public int getUnitID() {
         return unitID;
     }
-    public void upgradeHome(){
+
+    public void upgradeHome() {
 
     }
 }

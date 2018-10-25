@@ -8,8 +8,8 @@ public class City {
     private boolean attak = false;
     private int num_blocks;
 
-    public void newBlock(){
-        blockArr.add(new Block (num_blocks));
+    public void newBlock() {
+        blockArr.add(new Block(num_blocks));
         num_blocks++;
     }
 
