@@ -26,4 +26,17 @@ public class Bazaar {
     public int getUnitID() {
         return unitID;
     }
+
+    public int getEmployee() {
+        return employee;
+    }
+//    public int gillCalc(){
+//        int toAdd;
+//        for (Person person : personArr) {
+//             personArr;
+//        }
+//
+//    }
+
 }
+

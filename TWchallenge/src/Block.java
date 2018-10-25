@@ -11,7 +11,7 @@ public class Block {
     private int num_units = 0;
     private boolean defense = false;
     private int population = 0;
-    private int gill = 0;
+//    private int gill = 0;
     private int score = 0;
 
     Block(int numblck) {
@@ -46,9 +46,9 @@ public class Block {
         return score;
     }
 
-    public int getGill() {
-        return gill;
-    }
+//    public int getGill() {
+//        return gill;
+//    }
 
     public String getType(int untId) {
         for (Army army : armyArr) {
@@ -69,5 +69,22 @@ public class Block {
         }
         return "NotFound";
     }
+
+
+//    public int gillCalc(){
+//        int addGill = 0;
+//        int employments = 0;
+//        for (Defense defence : defenseArr) {
+//            employments += defence.getDefenders()
+//        }
+//        for (Army army : armyArr) {
+//            employments += army.getSoldiers();
+//        }
+//        for (Bazaar bazaar : bazaarArr) {
+//            employments += bazaar.getEmployee();
+//        }
+//        int unemployment = population - employments;
+//
+//    }
 
 }

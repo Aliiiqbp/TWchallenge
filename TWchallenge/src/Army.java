@@ -26,4 +26,8 @@ public class Army {
     public int getUnitID() {
         return unitID;
     }
+
+    public int getSoldiers() {
+        return soldiers;
+    }
 }
