@@ -7,9 +7,9 @@ public class Main {
 
         Scanner read = new Scanner(System.in);
         City[] tehran = new City[2];
-
+        
         int round = 0;
-
+        
         while (true) {
 
             String command = read.nextLine();
@@ -19,7 +19,8 @@ public class Main {
             commandSplitted = command.split(" ");
             int blockID = 0;
             int unitID = 0;
-//End Game *_*
+
+    //End Game *_*
             if (command.equalsIgnoreCase("yield")) {
                 break;
             }
@@ -113,8 +114,8 @@ public class Main {
                     case "Home":
                         tehran[round].getBlockArr().get(blockID).upgradeHome(unitID);
                         break;
-                    case "Defence":
-                        tehran[round].getBlockArr().get(blockID).upgradeDefence(unitID);
+                    case "Defense":
+                        tehran[round].getBlockArr().get(blockID).upgradeDefense(unitID);
                         break;
                     default:
                         System.out.println("not possible");
