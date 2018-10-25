@@ -12,7 +12,7 @@ public class Block {
     private boolean defense = false;
     private int population = 0;
     private int unemployment = 0;
-//    private int gill = 0;
+    //    private int gill = 0;
     private int score = 0;
 
     Block(int numblck) {
@@ -26,7 +26,7 @@ public class Block {
         unemployment = floor * unit * 5;
     }
 
-    public boolean addbazaar() {
+    public boolean addBazaar() {
         num_units++;
         if (unemployment < 50)
             return false;
@@ -34,13 +34,13 @@ public class Block {
         Bazaar bazaar = new Bazaar(blockID, num_units);
         bazaarArr.add(bazaar);
         for (Home home : homeArr) {
-            for (Person person : home.getPersonArr()){
-                if (!person.getisEmp()){
+            for (Person person : home.getPersonArr()) {
+                if (!person.getisEmp()) {
                     person.setEmp(true);
-                    unemployment --;
+                    unemployment--;
                     bazaar.getPersonArr().add(person);
                     counter++;
-                    if (counter == 50){
+                    if (counter == 50) {
                         return true;
                     }
                 }

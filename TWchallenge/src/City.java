@@ -13,6 +13,18 @@ public class City {
         num_blocks++;
     }
 
+    public int dayCounter() {
+        for (Block block : blockArr) {
+            for (Army army : block) {
+                army.setDay(army.getDay() + 1);
+            }
+            for (Defense defense : block) {
+                defense.setDay(defense.getDay() + 1);
+            }
+        }
+    }
+
+
     public int getScore() {
         return score;
     }

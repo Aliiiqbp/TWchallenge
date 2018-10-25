@@ -84,7 +84,7 @@ public class Main {
             if (command.matches("add bazar \\d")) {
 
                 blockID = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockID).addbazaar();
+                tehran[round].getBlockArr().get(blockID).addBazaar();
                 continue;
             } else if (command.matches("add army \\d")) {
 
