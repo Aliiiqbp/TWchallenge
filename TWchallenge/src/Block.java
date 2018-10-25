@@ -11,6 +11,7 @@ public class Block {
     private int num_units = 0;
     private boolean defense = false;
     private int population = 0;
+    private int unemployment = 0;
 //    private int gill = 0;
     private int score = 0;
 
@@ -22,10 +23,12 @@ public class Block {
         num_units++;
         homeArr.add(new Home(floor, unit, blockID, num_units));
         System.out.println(num_units);
+        unemployment = floor * unit * 5;
     }
 
     public void addbazaar() {
         num_units++;
+
         bazaarArr.add(new Bazaar(blockID, num_units));
         System.out.println(num_units);
     }
