@@ -50,6 +50,28 @@ public class Block {
         return true;
     }
 
+    public void removeBazaar(int blckID, int untID) {
+        blockID = blckID;
+        num_units--;
+        int counter = 0;
+        Bazaar bazaar = getBazaarById(untID);
+        if (bazaar != null) {
+            bazaarArr.remove(bazaar);
+            for (Person person : bazaar.getPersonArr()) {
+                person.setEmp(true);
+                unemployment--;
+            }
+        }
+    }
+
+    private Bazaar getBazaarById(int untId) {
+        for (Bazaar bazaar : bazaarArr) {
+            if (bazaar.getUnitID() == untId)
+                return bazaar;
+        }
+        return null;
+    }
+
     public void addArmy() {
         num_units++;
         armyArr.add(new Army(blockID, num_units));
