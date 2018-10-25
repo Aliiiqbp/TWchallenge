@@ -13,7 +13,7 @@ public class Defense {
         unitID = untId;
     }
 
-    public void upgradeDefence() {
+    public void upgradeDefense() {
 
     }
 

@@ -7,9 +7,9 @@ public class Main {
 
         Scanner read = new Scanner(System.in);
         City[] tehran = new City[2];
-
+        
         int round = 0;
-
+        
         while (true) {
 
             String command = read.nextLine();
@@ -17,9 +17,10 @@ public class Main {
 
             String[] commandSplitted = new String[5];
             commandSplitted = command.split(" ");
-            int blockNumber = 0;
+            int blockID = 0;
+            int unitID = 0;
 
-//End Game *_*
+    //End Game *_*
             if (command.equalsIgnoreCase("yield")) {
                 break;
             }
@@ -66,13 +67,13 @@ public class Main {
                 continue;
             } else if (command.matches("remove [\\d+]")) {
 
-                blockNumber = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockNumber)./////////////////////////remove
+                blockID = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockID)./////////////////////////remove
                 continue;
             } else if (command.matches("upgrade [\\d+]")) {
 
-                blockNumber = Integer.parseInt(commandSplitted[1])
-                tehran[round].getBlockArr().get(blockNumber).//////////////////////////upgrade
+                blockID = Integer.parseInt(commandSplitted[1])
+                tehran[round].getBlockArr().get(blockID).//////////////////////////upgrade
                 continue;
             }
 
@@ -80,18 +81,18 @@ public class Main {
 //Add Bazaar, Army ,Defense
             if (command.matches("add bazar \\d")) {
 
-                blockNumber = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockNumber).addbazaar();
+                blockID = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockID).addbazaar();
                 continue;
             } else if (command.matches("add army \\d")) {
 
-                blockNumber = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockNumber).addArmy();
+                blockID = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockID).addArmy();
                 continue;
             } else if (command.matches("add defense \\d")) {
 
-                blockNumber = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockNumber).addDefense();
+                blockID = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockID).addDefense();
                 continue;
             }
 
@@ -99,20 +100,36 @@ public class Main {
 //Upgrade [B.id][U,id]
             if (command.matches("upgrade \\d \\d")) {
 
+                blockID = Integer.parseInt(commandSplitted[1]);
+                unitID = Integer.parseInt(commandSplitted[2]);
 
-                if (tehran[round].getBlockArr().get().getType().equalsIgnoreCase())
+                switch (tehran[round].getBlockArr().get(blockID).getType(unitID)) {
 
-                    continue;
+                    case "Army":
+                        tehran[round].getBlockArr().get(blockID).upgradeArmy(unitID);
+                        break;
+                    case "Bazaar":
+                        tehran[round].getBlockArr().get(blockID).upgradeBazaar(unitID);
+                        break;
+                    case "Home":
+                        tehran[round].getBlockArr().get(blockID).upgradeHome(unitID);
+                        break;
+                    case "Defense":
+                        tehran[round].getBlockArr().get(blockID).upgradeDefense(unitID);
+                        break;
+                    default:
+                        System.out.println("not possible");
+                }
+
+                continue;
+
+
             } else if (command.matches("remove [B.id] [U.id]")) {
 
                 //army, defense, bazaar getType()
 
                 continue;
             }
-
-
         }
     }
-
-
 }
