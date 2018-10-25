@@ -14,6 +14,11 @@ public class Main {
 
             String command = read.nextLine();
             command = command.toLowerCase();
+
+            String[] commandSplitted = new String[5];
+            commandSplitted = command.split(" ");
+
+
 //End Game *_*
             if (command.equalsIgnoreCase("yield")) {
                 break;
@@ -34,10 +39,10 @@ public class Main {
             } else if (command.equalsIgnoreCase("see gills")) {
                 System.out.println(tehran[round].getGill());
                 continue;
-            } else if (command.matches("attack \\d")) {
+            } else if (command.matches("attack [\\d+]")) {
 
                 continue;
-            } else if (command.matches("Loot \\d")) {
+            } else if (command.matches("Loot [\\d+]")) {
 
                 continue;
             }
@@ -59,17 +64,22 @@ public class Main {
             if (command.equalsIgnoreCase("add block")) {
                 tehran[round].newBlock();
                 continue;
-            } else if (command.matches("remove \\d")) {
-                tehran[round].getBlockArr().get(B.id)./////////////////////////remove
+            } else if (command.matches("remove [\\d+]")) {
+
+                int blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber)./////////////////////////remov
                 continue;
-            } else if (command.matches("upgrade \\d")) {
-                tehran[round].getBlockArr().get(B.id).//////////////////////////upgrade
+            } else if (command.matches("upgrade [\\d+]")) {
+
+                int blockNumber = Integer.parseInt(commandSplitted[1])
+                tehran[round].getBlockArr().get(blockNumber).//////////////////////////upgrade
                 continue;
             }
 
 
 //Add Bazaar, Army ,Defense
             if (command.matches("add bazar \\d")) {
+
                 tehran[round].getBlockArr().get(B.id).addbazaar();
                 continue;
             } else if (command.matches("add army \\d")) {
