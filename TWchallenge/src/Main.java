@@ -57,7 +57,7 @@ public class Main {
                 blockID = commandSplitted[2];
                 int numberOfFloor = commandSplitted[3];
                 int numberOfunits = commandSplitted[4];
-                tehran[round].getBlockArr().get(blockID).addHome(numberOfFloor, numberOfFloor);
+                tehran[round].getBlockArr().get(blockID).addHome(numberOfFloor, numberOfunits);
 
                 continue;
             } else if (command.matches("upgrade [B.id] [U.id] (floor || unit)")) {
