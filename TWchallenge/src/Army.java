@@ -2,11 +2,10 @@ import java.util.*;
 
 public class Army {
     private int blockID;
-    private int coefficiency;
-    private int level;
+    private int level = 1;
+    private double coefficiency = 0.2;
     private int unitID;
     private int score;
-    private int gill;
     private int day = 0;
     private int soldiers = 0;
     private ArrayList<Person> personArr = new ArrayList<Person>();
@@ -22,10 +21,6 @@ public class Army {
 
     public int getScore() {
         return score;
-    }
-
-    public int getGill() {
-        return gill;
     }
 
     public int getUnitID() {

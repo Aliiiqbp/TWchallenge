@@ -2,7 +2,8 @@ import java.util.*;
 
 public class Block {
     private int blockID = 0;
-    private int level = 0;
+    private int level = 1;
+    private int capacity = 15;
     private ArrayList<Home> homeArr = new ArrayList<Home>();
     private ArrayList<Bazaar> bazaarArr = new ArrayList<Bazaar>();
     private ArrayList<Army> armyArr = new ArrayList<Army>();

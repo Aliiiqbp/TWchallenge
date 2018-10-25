@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Home {
-    private int level = 0;
+    private int level = 1;
     private int population = 0;
     private int floor = 0;
     private int unit = 0;
