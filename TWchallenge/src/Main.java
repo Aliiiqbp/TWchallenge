@@ -84,7 +84,7 @@ public class Main {
 //Upgrade [B.id][U,id]
             if (command.matches("upgrade \\d \\d")) {
 
-
+                if (tehran[round].)
 
                 continue;
             } else if (command.matches("remove [B.id] [U.id]")) {
