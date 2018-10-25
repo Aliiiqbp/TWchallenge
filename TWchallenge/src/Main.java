@@ -14,6 +14,11 @@ public class Main {
 
             String command = read.nextLine();
             command = command.toLowerCase();
+
+            String[] commandSplitted = new String[5];
+            commandSplitted = command.split(" ");
+            int blockNumber = 0;
+
 //End Game *_*
             if (command.equalsIgnoreCase("yield")) {
                 break;
@@ -34,10 +39,10 @@ public class Main {
             } else if (command.equalsIgnoreCase("see gills")) {
                 System.out.println(tehran[round].getGill());
                 continue;
-            } else if (command.matches("attack \\d")) {
+            } else if (command.matches("attack [\\d+]")) {
 
                 continue;
-            } else if (command.matches("Loot \\d")) {
+            } else if (command.matches("Loot [\\d+]")) {
 
                 continue;
             }
@@ -59,24 +64,34 @@ public class Main {
             if (command.equalsIgnoreCase("add block")) {
                 tehran[round].newBlock();
                 continue;
-            } else if (command.matches("remove \\d")) {
-                tehran[round]. // remove block
+            } else if (command.matches("remove [\\d+]")) {
+
+                blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber)./////////////////////////remove
                 continue;
-            } else if (command.matches("upgrade \\d")) {
-                tehran[round]. // upgrade block
+            } else if (command.matches("upgrade [\\d+]")) {
+
+                blockNumber = Integer.parseInt(commandSplitted[1])
+                tehran[round].getBlockArr().get(blockNumber).//////////////////////////upgrade
                 continue;
             }
 
 
 //Add Bazaar, Army ,Defense
             if (command.matches("add bazar \\d")) {
-                tehran[round].addBazar([B.id]);
+
+                blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber).addbazaar();
                 continue;
             } else if (command.matches("add army \\d")) {
-                tehran[round].addArmy([B.id]);
+
+                blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber).addArmy();
                 continue;
             } else if (command.matches("add defense \\d")) {
-                tehran[round].adddefense([B.id]);
+
+                blockNumber = Integer.parseInt(commandSplitted[1]);
+                tehran[round].getBlockArr().get(blockNumber).addDefense();
                 continue;
             }
 
@@ -85,8 +100,9 @@ public class Main {
             if (command.matches("upgrade \\d \\d")) {
 
 
+                if (tehran[round].getBlockArr().get().getType().equalsIgnoreCase())
 
-                continue;
+                    continue;
             } else if (command.matches("remove [B.id] [U.id]")) {
 
                 //army, defense, bazaar getType()
