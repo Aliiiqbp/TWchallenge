@@ -7,9 +7,9 @@ public class Main {
 
         Scanner read = new Scanner(System.in);
         City[] tehran = new City[2];
-        
+
         int round = 0;
-        
+
         while (true) {
 
             String command = read.nextLine();
@@ -20,7 +20,7 @@ public class Main {
             int blockID = 0;
             int unitID = 0;
 
-    //End Game *_*
+            //End Game *_*
             if (command.equalsIgnoreCase("yield")) {
                 break;
             }
@@ -68,12 +68,12 @@ public class Main {
             } else if (command.matches("remove [\\d+]")) {
 
                 blockID = Integer.parseInt(commandSplitted[1]);
-                tehran[round].getBlockArr().get(blockID)./////////////////////////remove
+                tehran[round].getBlockArr().get(blockID).removeBlock();
                 continue;
             } else if (command.matches("upgrade [\\d+]")) {
 
                 blockID = Integer.parseInt(commandSplitted[1])
-                tehran[round].getBlockArr().get(blockID).//////////////////////////upgrade
+                tehran[round].getBlockArr().get(blockID).upgradeBlock();
                 continue;
             }
 
@@ -126,10 +126,27 @@ public class Main {
 
             } else if (command.matches("remove [B.id] [U.id]")) {
 
-                //army, defense, bazaar getType()
+                switch (tehran[round].getBlockArr().get(blockID).getType(unitID)) {
 
+                    case "Army":
+                        tehran[round].getBlockArr().get(blockID).removeArmy(unitID);
+                        break;
+                    case "Bazaar":
+                        tehran[round].getBlockArr().get(blockID).removeBazaar(unitID);
+                        break;
+                    case "Home":
+                        tehran[round].getBlockArr().get(blockID).removeHome(unitID);
+                        break;
+                    case "Defense":
+                        tehran[round].getBlockArr().get(blockID).removeDefense(unitID);
+                        break;
+                    default:
+                        System.out.println("not possible");
+                }
                 continue;
             }
+
+
         }
     }
 }
