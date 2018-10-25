@@ -57,7 +57,7 @@ public class Main {
                 blockID = commandSplitted[2];
                 int numberOfFloor = commandSplitted[3];
                 int numberOfunits = commandSplitted[4];
-                tehran[round].getBlockArr().get(blockID).addHome(numberOfFloor, numberOfFloor);
+                tehran[round].getBlockArr().get(blockID).addHome(numberOfFloor, numberOfunits);
 
                 continue;
             } else if (command.matches("upgrade [B.id] [U.id] (floor || unit)")) {
@@ -116,7 +116,7 @@ public class Main {
                 switch (tehran[round].getBlockArr().get(blockID).getType(unitID)) {
 
                     case "Army":
-                        tehran[round].getBlockArr().get(blockID).upgradeArmy(unitID);
+                        tehran[round].getBlockArr().get(blockID).(unitID);
                         break;
                     case "Bazaar":
                         tehran[round].getBlockArr().get(blockID).upgradeBazaar(unitID);
