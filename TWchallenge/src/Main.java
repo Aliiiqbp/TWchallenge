@@ -33,6 +33,8 @@ public class Main {
                 } else {
                     round = 1;
                 }
+                City.countDay();
+
                 continue;
             } else if (command.equalsIgnoreCase("see score")) {
                 System.out.println(tehran[round].getScore());
