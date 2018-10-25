@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Bazaar {
+    private int blockID;
     private int level;
     private int unitID;
     private ArrayList<Person> personArr = new ArrayList<Person>();
@@ -9,6 +10,11 @@ public class Bazaar {
     private int employee;
     private int score;
     private int gill;
+
+    Bazaar(int blckID, int untID) {
+        blockID = blckID;
+        unitID = untID;
+    }
 
     public void upgradeBazaar() {
 
