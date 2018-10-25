@@ -10,6 +10,8 @@ public class Block {
     private int num_units = 0;
     private boolean defense = false;
     private int population = 0;
+    private int gill = 0;
+    private  int score = 0;
 
     public void addHome( int floor, int unit){
         homeArr.add(new Home (floor, unit, blockID, num_units));
@@ -31,8 +33,11 @@ public class Block {
         System.out.println(num_units);
         num_units++;
     }
-
-
-
+    public int getScore(){
+        return score;
+    }
+    public int getGill(){
+        return gill;
+    }
 
 }
