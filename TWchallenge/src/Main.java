@@ -74,7 +74,7 @@ public class Main {
                 continue;
             } else if (command.matches("upgrade [\\d+]")) {
 
-                blockID = Integer.parseInt(commandSplitted[1])
+                blockID = Integer.parseInt(commandSplitted[1]);
                 tehran[round].getBlockArr().get(blockID).upgradeBlock();
                 continue;
             }
@@ -122,9 +122,7 @@ public class Main {
                     default:
                         System.out.println("not possible");
                 }
-
                 continue;
-
 
             } else if (command.matches("remove [B.id] [U.id]")) {
 
