@@ -1,3 +1,5 @@
+
+
 public class Army {
     private int blockID;
     private int coefficiency;
