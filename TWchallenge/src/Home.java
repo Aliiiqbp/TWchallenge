@@ -16,6 +16,10 @@ public class Home {
         unit = unt;
         blockID = blckID;
         unitID = untID;
+        for ( int i = 0 ; i < 5*floor*unit ; i++){
+            personArr.add(new Person());
+        }
+
 
     }
 
@@ -33,5 +37,9 @@ public class Home {
 
     public void upgradeHome() {
 
+    }
+
+    public ArrayList<Person> getPersonArr() {
+        return personArr;
     }
 }
