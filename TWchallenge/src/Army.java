@@ -5,7 +5,6 @@ public class Army {
     private int unitID;
     private int score;
     private int gill;
-    private int test;
     private ArrayList<Person> personArr = new ArrayList<Person>();
 
     Army( int blckID, int untID){

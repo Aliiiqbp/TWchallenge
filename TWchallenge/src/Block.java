@@ -13,6 +13,10 @@ public class Block {
     private int gill = 0;
     private  int score = 0;
 
+    Block( int numblck){
+        blockID = numblck;
+    }
+
     public void addHome( int floor, int unit){
         homeArr.add(new Home (floor, unit, blockID, num_units));
         System.out.println(num_units);
