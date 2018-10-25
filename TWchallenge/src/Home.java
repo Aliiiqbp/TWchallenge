@@ -9,7 +9,7 @@ public class Home {
     private int score = 0;
     private int gill = 0;
     private int blockID = 0;
-    private ArrayList<Person> personArr = new ArrayList<Person>();
+    private ArrayList<Person> personArr = new ArrayList<>();
 
     Home(int flr, int unt, int blckID, int untID) {
         floor = flr;
