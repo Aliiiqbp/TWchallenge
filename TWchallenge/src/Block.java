@@ -96,6 +96,20 @@ public class Block {
         return true;
     }
 
+    public void removeArmy(int blckID, int untID) {
+        blockID = blckID;
+        num_units--;
+        int counter = 0;
+        Army army = getArmyByID(untID);
+        if (army != null) {
+            armyArr.remove(army);
+            for (Person person : army.getPersonArr()) {
+                person.setEmp(true);
+                unemployment--;
+            }
+        }
+    }
+
     private Army getArmyByID(int untId) {
         for (Army army : armyArr) {
             if (army.getUnitID() == untId)
