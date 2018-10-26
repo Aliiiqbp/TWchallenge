@@ -5,10 +5,10 @@ public class Army {
     private int level = 1;
     private double coefficiency = 0.2;
     private int unitID;
+    private ArrayList<Person> personArr = new ArrayList<Person>();
     private int score;
     private int day = 0;
     private int soldiers = 0;
-    private ArrayList<Person> personArr = new ArrayList<Person>();
 
     Army(int blckID, int untID) {
         blockID = blckID;
@@ -37,5 +37,13 @@ public class Army {
 
     public int getSoldiers() {
         return soldiers;
+    }
+
+    public void setPersonArr(ArrayList<Person> personArr) {
+        this.personArr = personArr;
+    }
+
+    public ArrayList<Person> getPersonArr() {
+        return personArr;
     }
 }

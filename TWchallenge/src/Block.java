@@ -54,7 +54,7 @@ public class Block {
         blockID = blckID;
         num_units--;
         int counter = 0;
-        Bazaar bazaar = getBazaarById(untID);
+        Bazaar bazaar = getBazaarByID(untID);
         if (bazaar != null) {
             bazaarArr.remove(bazaar);
             for (Person person : bazaar.getPersonArr()) {
@@ -64,7 +64,7 @@ public class Block {
         }
     }
 
-    private Bazaar getBazaarById(int untId) {
+    private Bazaar getBazaarByID(int untId) {
         for (Bazaar bazaar : bazaarArr) {
             if (bazaar.getUnitID() == untId)
                 return bazaar;
@@ -72,10 +72,36 @@ public class Block {
         return null;
     }
 
-    public void addArmy() {
+    public boolean addArmy() {
         num_units++;
-        armyArr.add(new Army(blockID, num_units));
+        if (unemployment < 100)
+            return false;
+        int counter = 0;
+        Army army = new Army(blockID, num_units);
+        armyArr.add(army);
+        for (Home home : homeArr) {
+            for (Person person : home.getPersonArr()) {
+                if (!person.getisEmp()) {
+                    person.setEmp(true);
+                    unemployment--;
+                    army.getPersonArr().add(person);
+                    counter++;
+                    if (counter == 100) {
+                        return true;
+                    }
+                }
+            }
+        }
         System.out.println(num_units);
+        return true;
+    }
+
+    private Army getArmyByID(int untId) {
+        for (Army army : armyArr) {
+            if (army.getUnitID() == untId)
+                return army;
+        }
+        return null;
     }
 
     public void addDefense() {

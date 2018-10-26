@@ -37,7 +37,7 @@ public class City {
         return blockArr;
     }
 
-    public void removeBlock(num_block){
+    public void removeBlock(num_block) {
 
     }
 }

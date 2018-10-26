@@ -16,7 +16,7 @@ public class Home {
         unit = unt;
         blockID = blckID;
         unitID = untID;
-        for ( int i = 0 ; i < 5*floor*unit ; i++){
+        for (int i = 0; i < 5 * floor * unit; i++) {
             personArr.add(new Person());
         }
 
